@@ -30,7 +30,7 @@ def wrong_format():
     maps = ['.cub', 'wrong1.cub', 'wrong2', 'wrong3.cub', 'wrong4.cub'
             , 'wrong5.cub', 'wrong6.cub', 'wrong7.cub', 'wrong8.cub', 'wrong9.cub'
             , 'wrong10.cub', 'wrong11.cub', 'wrong12.cub', 'wrong13.cub', 'wrong14.cub'
-            , 'wrong15.cub', 'wrong16.cub']
+            , 'wrong15.cub', 'wrong16.cub', 'wrong17.cub']
 
     for m in maps:
         test = subprocess.Popen(f"{valgrind} {run_cmd + m}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -42,7 +42,7 @@ def wrong_format():
         else:
             print(f"{GREEN}{i}.[OK] [MOK]{RESET}")
         i += 1
-        if i == 34:
+        if i == 35:
             if exit_code != 0:
                 print(f"{RED}{i}. [KO]{RESET} {BLUE}EXIT [0] {RED}RETURN [{exit_code}]{RESET}")
                 print(f"{RED}Command: {run_cmd + m}{RESET}")
