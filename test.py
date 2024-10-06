@@ -42,7 +42,7 @@ def wrong_format():
         else:
             print(f"{GREEN}{i}.[OK] [MOK]{RESET}")
         i += 1
-        if i == 35:
+        if i == 36:
             if exit_code != 0:
                 print(f"{RED}{i}. [KO]{RESET} {BLUE}EXIT [0] {RED}RETURN [{exit_code}]{RESET}")
                 print(f"{RED}Command: {run_cmd + m}{RESET}")
